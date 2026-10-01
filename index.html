@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Fila</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Sistema de Atención</h1>
+            <p>Ingrese su nombre para obtener un número de orden.</p>
+        </header>
+
+        <main>
+            <section class="panel">
+                <h2>Agregar persona</h2>
+
+                <div class="formulario">
+                    <input type="text" id="nombre" placeholder="Ingrese el nombre">
+                    <button id="btnAgregar">Agregar a la fila</button>
+                </div>
+
+                <p id="mensaje" class="mensaje"></p>
+            </section>
+
+            <section class="panel">
+                <div class="titulo-fila">
+                    <h2>Personas en espera</h2>
+                    <span id="cantidadEnFila">0</span>
+                </div>
+
+                <div id="fila" class="fila">
+                    <p class="vacio">No hay personas en la fila.</p>
+                </div>
+
+                <button id="btnAtender" class="btn-atender">
+                    Atender siguiente
+                </button>
+            </section>
+
+            <section class="panel acciones">
+                <button id="btnLimpiar" class="btn-limpiar">
+                    Limpiar pantalla y ver estadísticas
+                </button>
+            </section>
+
+            <section id="estadisticas" class="panel estadisticas">
+                <h2>Estadísticas</h2>
+
+                <div class="estadistica-grid">
+                    <div class="dato">
+                        <span id="totalAnotadas">0</span>
+                        <p>Personas anotadas</p>
+                    </div>
+
+                    <div class="dato">
+                        <span id="totalAtendidas">0</span>
+                        <p>Personas atendidas</p>
+                    </div>
+
+                    <div class="dato">
+                        <span id="porcentaje">0%</span>
+                        <p>Porcentaje atendido</p>
+                    </div>
+                </div>
+
+                <button id="btnVolver" class="btn-volver">
+                    Volver al sistema
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
